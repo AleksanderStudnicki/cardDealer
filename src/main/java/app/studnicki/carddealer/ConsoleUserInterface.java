@@ -28,7 +28,7 @@ public class ConsoleUserInterface implements UserInterface {
     @Override
     public String askForName(int playerIndex, int minimumLength) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Player #" + playerIndex + " what is your name: ");
+        System.out.println("Player #" + (playerIndex + 1) + " what is your name: ");
         String name = scanner.nextLine();
         if(name.length() < minimumLength){
             System.out.println("Name is too short, please type a longer one!");
@@ -61,6 +61,6 @@ public class ConsoleUserInterface implements UserInterface {
 
     @Override
     public void showWelcomeMessage() {
-        System.out.println("Welcome to the Card Dealer");
+        System.out.println("---------------------------\nWelcome to the Card Dealer!\n---------------------------");
     }
 }
