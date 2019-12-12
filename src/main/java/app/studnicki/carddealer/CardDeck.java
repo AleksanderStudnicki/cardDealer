@@ -1,11 +1,13 @@
 package app.studnicki.carddealer;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.IntStream;
 
 class CardDeck {
+
+    //TODO: Declaration redundancy warnings on floor and ceiling value,
+    // just because another decks are not implemented at the moment.
 
     static List<Card> get24CardsDeck(){
         return getCardsFromRange(9, 15);
@@ -22,15 +24,13 @@ class CardDeck {
         List<Card> cardDeck = new LinkedList<>();
 
         IntStream.range(floor, ceiling)
-                .forEach(figure -> {
-                    IntStream.range(0, 4)
-                            .forEach(color -> {
-                                CardColor cardColor = CardColor.of(color);
-                                CardFigure cardFigure = CardFigure.of(figure);
-                                Card card = new Card(cardFigure, cardColor);
-                                cardDeck.add(card);
-                            });
-                });
+                .forEach(figure -> IntStream.range(0, 4)
+                        .forEach(color -> {
+                            CardColor cardColor = CardColor.of(color);
+                            CardFigure cardFigure = CardFigure.of(figure);
+                            Card card = new Card(cardFigure, cardColor);
+                            cardDeck.add(card);
+                        }));
 
         return cardDeck;
     }

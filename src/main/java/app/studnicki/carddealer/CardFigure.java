@@ -1,9 +1,9 @@
 package app.studnicki.carddealer;
 
 enum CardFigure {
-    NINE(9), TEN(10), JACK(11), QUEEN(12), KING(13), ACE(14);
+    NINE(), TEN(), JACK(), QUEEN(), KING(), ACE();
 
-    CardFigure(int value){}
+    CardFigure(){}
 
     static CardFigure of(int value){
         switch(value){

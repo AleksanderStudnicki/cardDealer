@@ -2,7 +2,7 @@ package app.studnicki.carddealer;
 
 import java.util.List;
 
-public interface UserInterface {
+interface UserInterface {
     List<String> askForPlayersNames(int i, int minimumLength);
 
     int askForAmountOfPlayers(int minimalValue, int maximumValue);

@@ -3,9 +3,9 @@ package app.studnicki.carddealer;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Player {
+class Player {
     private final String name;
-    private List<Card> cards = new ArrayList<>();
+    private final List<Card> cards = new ArrayList<>();
 
     Player(String name) {
         this.name = name;

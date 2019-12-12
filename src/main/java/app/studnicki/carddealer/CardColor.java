@@ -3,7 +3,7 @@ package app.studnicki.carddealer;
 enum CardColor {
     SPADES(0), HEARTS(1), DIAMONDS(2), CLUBS(3);
 
-    int value;
+    private final int value;
 
     CardColor(int value){
         this.value = value;

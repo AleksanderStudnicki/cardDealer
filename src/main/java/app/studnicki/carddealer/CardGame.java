@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 
 class CardGame {
 
-    UserInterface ui;
+    private final UserInterface ui;
 
     CardGame(UserInterface ui){
         this.ui = ui;
