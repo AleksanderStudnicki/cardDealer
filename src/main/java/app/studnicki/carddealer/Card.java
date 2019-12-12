@@ -12,8 +12,7 @@ class Card {
 
     @Override
     public String toString() {
-        return "{" + figure +
-                " | " + color +
-                '}';
+        return figure +
+                " " + color;
     }
 }

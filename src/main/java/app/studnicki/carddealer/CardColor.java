@@ -27,13 +27,13 @@ enum CardColor {
     private String symbol(){
         switch(value){
             case 0:
-                return "\\u2660";
+                return String.valueOf((char)0x2660);
             case 1:
-                return "\\u2665";
+                return String.valueOf((char)0x2665);
             case 2:
-                return "\\u2666";
+                return String.valueOf((char)0x2666);
             case 3:
-                return "\\u2663";
+                return String.valueOf((char)0x2663);
             default:
                 throw new IllegalArgumentException("There are no color with that value: " + value);
         }

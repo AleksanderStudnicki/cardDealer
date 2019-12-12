@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 
 class CardDeck {
 
-    public static List<Card> get24CardsDeck(){
+    static List<Card> get24CardsDeck(){
         return getCardsFromRange(9, 15);
     }
 
@@ -16,14 +16,14 @@ class CardDeck {
             throw new IllegalArgumentException("Floor value of card range must be higher than 2");
         }
         if(ceiling > 15){
-            throw new IllegalArgumentException("Ceiling value of card range must be lower than 14");
+            throw new IllegalArgumentException("Ceiling value of card range must be lower than 15");
         }
 
         List<Card> cardDeck = new LinkedList<>();
 
         IntStream.range(floor, ceiling)
                 .forEach(figure -> {
-                    IntStream.range(0, 3)
+                    IntStream.range(0, 4)
                             .forEach(color -> {
                                 CardColor cardColor = CardColor.of(color);
                                 CardFigure cardFigure = CardFigure.of(figure);
