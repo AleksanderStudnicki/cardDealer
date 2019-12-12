@@ -1,4 +1,4 @@
 package app.studnicki.carddealer;
 
-public class UI {
+class CardGame {
 }
